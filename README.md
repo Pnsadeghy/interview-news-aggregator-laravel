@@ -31,6 +31,8 @@ This application is built with Laravel 11 and designed to provide users with a p
 ### Application useful commands
 - Update api documentation
   - `docker compose exec app php artisan scribe:generate`
+- Run tests
+  - `docker compose exec app ./vendor/bin/phpunit`
 
 
 ### Basic docker compose commands
