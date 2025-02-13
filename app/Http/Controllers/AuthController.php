@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\AuthRegisterRequest;
 use App\Http\Resources\Auth\LoginResource;
 use App\Repositories\Interfaces\IUserRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 /**
  * @group Auth
@@ -62,7 +63,9 @@ class AuthController extends Controller
      *
      * @authenticated
      */
-    public function logout(): JsonResponse {
+    public function logout(Request $request): JsonResponse {
+        $request->user()->currentAccessToken()->delete();
+
         return response()->json();
     }
 }

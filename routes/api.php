@@ -9,7 +9,13 @@ Route::prefix('auth')
     Route::post('login', 'login')->name('login');
     Route::post('register', 'register')->name('register');
 
-    Route::middleware(['auth:api'])->group(function () {
-       Route::post('logout', 'logout')->name('logout');
+    Route::middleware(['auth:sanctum'])->group(function () {
+        Route::post('logout', 'logout')->name('logout');
     });
+});
+
+Route::prefix('user')
+    ->name('user.')
+    ->middleware(['auth:sanctum'])->group(function () {
+        
 });

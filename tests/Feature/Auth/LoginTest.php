@@ -10,6 +10,8 @@ class LoginTest extends TestCase
 {
     use RefreshDatabase;
 
+    private string $url = '/api/auth/login';
+
     /** @test */
     public function user_can_login_with_valid_credentials()
     {
@@ -18,7 +20,7 @@ class LoginTest extends TestCase
             'password' => bcrypt('password123'),
         ]);
 
-        $response = $this->postJson('/api/auth/login', [
+        $response = $this->postJson($this->url, [
             'email' => 'test@example.com',
             'password' => 'password123',
         ]);
@@ -49,7 +51,7 @@ class LoginTest extends TestCase
             'password' => bcrypt('password123'),
         ]);
 
-        $response = $this->postJson('/api/auth/login', [
+        $response = $this->postJson($this->url, [
             'email' => 'test@example.com',
             'password' => 'wrongpassword',
         ]);

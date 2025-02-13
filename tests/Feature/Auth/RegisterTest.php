@@ -10,6 +10,8 @@ class RegisterTest extends TestCase
 {
     use RefreshDatabase;
 
+    private string $url = '/api/auth/register';
+
     /** @test */
     public function user_can_register_with_valid_data()
     {
@@ -20,7 +22,7 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'password123',
         ];
 
-        $response = $this->postJson('/api/auth/register', $payload);
+        $response = $this->postJson($this->url, $payload);
 
         $response->assertStatus(201)
             ->assertJsonStructure([
@@ -58,7 +60,7 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'password123',
         ];
 
-        $response = $this->postJson('/api/auth/register', $payload);
+        $response = $this->postJson($this->url, $payload);
 
         $response->assertStatus(422)
             ->assertJsonValidationErrors(['email']);
