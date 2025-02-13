@@ -50,13 +50,17 @@ services:
         networks:
             - app_network
 
-    queue:
+    schedule:
         build:
             context: .
             dockerfile: .deploy/Dockerfile.production
         environment:
             - APP_ENV=queue
-        command: php artisan queue:work
+        volumes:
+            - .:/var/www/html
+        command: php artisan schedule:run
+        depends_on:
+            - app
         networks:
             - app_network
 
