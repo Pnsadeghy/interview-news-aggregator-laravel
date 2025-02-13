@@ -1,8 +1,8 @@
 <?php
 
-namespace Utils\Repositories;
+namespace App\Utils\Repositories;
 
-use Utils\Interfaces\IResourceRepository;
+use App\Utils\Interfaces\IResourceRepository;
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Model;

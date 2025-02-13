@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Auth\AuthLoginRequest;
 use App\Http\Requests\Auth\AuthRegisterRequest;
+use App\Http\Resources\Auth\LoginResource;
+use App\Repositories\Interfaces\IUserRepository;
 use Illuminate\Http\JsonResponse;
 
 /**
@@ -13,6 +15,9 @@ use Illuminate\Http\JsonResponse;
  */
 class AuthController extends Controller
 {
+    public function __construct(protected IUserRepository $repository)
+    {}
+
     /**
      * Login
      *
@@ -22,7 +27,14 @@ class AuthController extends Controller
      * @responseFile 200 resources/responses/Auth/login.json
      */
     public function login(AuthLoginRequest $request): JsonResponse {
-        return response()->json();
+
+        $user = $this->repository->findByEmailAndPassword(
+            $request->string("email"), $request->string("password")
+        );
+
+        abort_if($user === null, 401, __("auth.failed"));
+
+        return response()->json(new LoginResource($user));
     }
 
     /**
@@ -36,7 +48,13 @@ class AuthController extends Controller
      * @responseFile 201 resources/responses/Auth/register.json
      */
     public function register(AuthRegisterRequest $request): JsonResponse {
-        return response()->json();
+        $data = $request->validated();
+
+        $data["password"] = bcrypt($data["password"]);
+
+        $user = $this->repository->store($data);
+
+        return response()->json(new LoginResource($user), 201);
     }
 
     /**

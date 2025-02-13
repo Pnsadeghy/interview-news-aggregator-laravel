@@ -1,9 +1,9 @@
 <?php
 
-namespace Utils\Controllers;
+namespace App\Utils\Controllers;
 
 use App\Http\Controllers\Controller;
-use Utils\Interfaces\IResourceRepository;
+use App\Utils\Interfaces\IResourceRepository;
 
 class ResourceController extends Controller
 {
