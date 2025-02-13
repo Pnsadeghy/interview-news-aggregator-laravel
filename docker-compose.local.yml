@@ -48,6 +48,8 @@ services:
       dockerfile: .deploy/Dockerfile.production
     environment:
       - APP_ENV=queue
+    volumes:
+      - .:/var/www/html
     command: php artisan queue:work
     networks:
       - app_network
