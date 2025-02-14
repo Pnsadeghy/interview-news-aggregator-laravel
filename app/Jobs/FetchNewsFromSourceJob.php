@@ -6,6 +6,8 @@ use App\Repositories\Interfaces\INewsSourceRepository;
 use App\Services\Interfaces\INewsReaderService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class FetchNewsFromSourceJob
 {
@@ -58,6 +60,6 @@ class FetchNewsFromSourceJob
 
         cache()->forever(self::INDEX_CACHE_KEY, $currentIndex + 1);
 
-        return new $readerClass($source);
+        return new $readerClass($source->api_url, $source->api_key, $source->request_data);
     }
 }

@@ -2,24 +2,23 @@
 
 namespace App\Services;
 
-use App\Models\NewsSource;
 use App\Services\Interfaces\INewsReaderService;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 
 abstract class AbstractNewsReaderService implements INewsReaderService
 {
-    private string $apiUrl;
-    private string $apiKey;
-    private string $requestData;
+    protected string $apiUrl;
+    protected string $apiKey;
+    protected array $requestData;
 
     protected string $apiKeyQueryName = "apiKey";
 
-    public function __construct(NewsSource $source)
+    public function __construct(string $apiUrl, string $apiKey, array $requestData = [])
     {
-        $this->apiUrl = $source->api_url;
-        $this->apiKey = $source->api_key;
-        $this->requestData = $source->request_data;
+        $this->apiUrl = $apiUrl;
+        $this->apiKey = $apiKey;
+        $this->requestData = $requestData;
     }
 
     abstract public function fetchArticles(): array;
@@ -29,7 +28,10 @@ abstract class AbstractNewsReaderService implements INewsReaderService
      */
     protected function getHttpRequest($query = []): Response
     {
-        return Http::get($this->apiUrl, $this->getRequestData($query));
+        $query = array_merge($query, $this->requestData);
+        $query[$this->apiKeyQueryName] = $this->apiKey;
+
+        return Http::get($this->apiUrl, $query);
     }
 
     /**
@@ -37,16 +39,9 @@ abstract class AbstractNewsReaderService implements INewsReaderService
      */
     protected function postHttpRequest($data = []): Response
     {
-        return Http::post($this->apiUrl, $this->getRequestData($data));
-    }
-
-    /**
-     * Get request data
-     */
-    private function getRequestData(array $data): array
-    {
         $data = array_merge($data, $this->requestData);
         $data[$this->apiKeyQueryName] = $this->apiKey;
-        return $data;
+
+        return Http::post($this->apiUrl, $data);
     }
 }
