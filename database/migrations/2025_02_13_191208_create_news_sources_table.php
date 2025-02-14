@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('api_url');
             $table->string('api_key');
+            $table->json('request_data');
             $table->string('reader_class');
             $table->boolean('is_active');
 
