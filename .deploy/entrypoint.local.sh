@@ -11,6 +11,6 @@ fi
 
 chmod -R 775 /var/www/html
 
-composer install
+composer install --optimize-autoloader
 
 exec "$@"

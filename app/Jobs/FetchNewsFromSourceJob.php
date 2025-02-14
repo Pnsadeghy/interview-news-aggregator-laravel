@@ -2,14 +2,10 @@
 
 namespace App\Jobs;
 
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\Log;
 
-class FetchNewsFromSourceJob implements ShouldQueue
+class FetchNewsFromSourceJob
 {
-    use Queueable;
-
     /**
      * Create a new job instance.
      */

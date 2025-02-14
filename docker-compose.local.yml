@@ -50,7 +50,7 @@ services:
       - APP_ENV=queue
     volumes:
       - .:/var/www/html
-    command: php artisan schedule:run
+    command: php artisan schedule:work
     depends_on:
       - app
     networks:
