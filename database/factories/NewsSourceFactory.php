@@ -21,7 +21,8 @@ class NewsSourceFactory extends Factory
             'is_active' => true,
             'api_url' => '',
             'api_key' => '',
-            'reader_class' => ''
+            'reader_class' => '',
+            'request_data' => []
         ];
     }
 
