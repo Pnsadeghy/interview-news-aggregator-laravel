@@ -82,6 +82,32 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-user-articles" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="user-articles">
+                    <a href="#user-articles">User Articles</a>
+                </li>
+                                    <ul id="tocify-subheader-user-articles" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="user-articles-GETapi-user-articles-feed">
+                                <a href="#user-articles-GETapi-user-articles-feed">User feed articles</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-articles-GETapi-user-articles">
+                                <a href="#user-articles-GETapi-user-articles">All articles</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-user-feeds" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="user-feeds">
+                    <a href="#user-feeds">User feeds</a>
+                </li>
+                                    <ul id="tocify-subheader-user-feeds" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="user-feeds-PUTapi-user-userFeed-config">
+                                <a href="#user-feeds-PUTapi-user-userFeed-config">Update feed config</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-feeds-GETapi-user-userFeed">
+                                <a href="#user-feeds-GETapi-user-userFeed">GET api/user/userFeed</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
             </div>
 
     <ul class="toc-footer" id="toc-footer">
@@ -91,7 +117,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 13, 2025</li>
+        <li>Last updated: February 15, 2025</li>
     </ul>
 </div>
 
@@ -130,8 +156,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"toby06@example.net\",
-    \"password\": \"p`Gze\'gODwefj\"
+    \"email\": \"phyllis72@example.net\",
+    \"password\": \"Qi,jc,mQT\\\\LMGo\\/kS\"
 }"
 </code></pre></div>
 
@@ -147,8 +173,8 @@ const headers = {
 };
 
 let body = {
-    "email": "toby06@example.net",
-    "password": "p`Gze'gODwefj"
+    "email": "phyllis72@example.net",
+    "password": "Qi,jc,mQT\\LMGo\/kS"
 };
 
 fetch(url, {
@@ -251,10 +277,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-login"
-               value="toby06@example.net"
+               value="phyllis72@example.net"
                data-component="body">
     <br>
-<p>Example: <code>toby06@example.net</code></p>
+<p>Example: <code>phyllis72@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -262,10 +288,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-login"
-               value="p`Gze'gODwefj"
+               value="Qi,jc,mQT\LMGo/kS"
                data-component="body">
     <br>
-<p>minimum character length is 6 Example: <code>p</code>Gze'gODwefj`</p>
+<p>minimum character length is 6 Example: <code>Qi,jc,mQT\LMGo/kS</code></p>
         </div>
         </form>
 
@@ -286,10 +312,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"dolor\",
-    \"email\": \"qmills@example.org\",
-    \"password\": \"7JB)yzhh&amp;d)\",
-    \"password_confirmation\": \"dicta\"
+    \"name\": \"et\",
+    \"email\": \"vilma.berge@example.com\",
+    \"password\": \");\\/U@U(,EK\'`e\\\"^d\",
+    \"password_confirmation\": \"recusandae\"
 }"
 </code></pre></div>
 
@@ -305,10 +331,10 @@ const headers = {
 };
 
 let body = {
-    "name": "dolor",
-    "email": "qmills@example.org",
-    "password": "7JB)yzhh&amp;d)",
-    "password_confirmation": "dicta"
+    "name": "et",
+    "email": "vilma.berge@example.com",
+    "password": ");\/U@U(,EK'`e\"^d",
+    "password_confirmation": "recusandae"
 };
 
 fetch(url, {
@@ -411,10 +437,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-auth-register"
-               value="dolor"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>dolor</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -422,10 +448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-register"
-               value="qmills@example.org"
+               value="vilma.berge@example.com"
                data-component="body">
     <br>
-<p>Example: <code>qmills@example.org</code></p>
+<p>Example: <code>vilma.berge@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -433,10 +459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-register"
-               value="7JB)yzhh&d)"
+               value=");/U@U(,EK'`e"^d"
                data-component="body">
     <br>
-<p>Example: <code>7JB)yzhh&amp;d)</code></p>
+<p>Example: <code>);/U@U(,EK'</code>e&quot;^d`</p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -444,10 +470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password_confirmation"                data-endpoint="POSTapi-auth-register"
-               value="dicta"
+               value="recusandae"
                data-component="body">
     <br>
-<p>Example: <code>dicta</code></p>
+<p>Example: <code>recusandae</code></p>
         </div>
         </form>
 
@@ -553,6 +579,707 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Accept"                data-endpoint="POSTapi-auth-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                <h1 id="user-articles">User Articles</h1>
+
+    <p>API endpoints for managing user articles</p>
+
+                                <h2 id="user-articles-GETapi-user-articles-feed">User feed articles</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-articles-feed">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user/articles/feed" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"q\": \"eveniet\",
+    \"per_page\": 16,
+    \"page\": 15
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/articles/feed"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "q": "eveniet",
+    "per_page": 16,
+    "page": 15
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-articles-feed">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-articles-feed" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-articles-feed"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-articles-feed"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-articles-feed" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-articles-feed">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-articles-feed" data-method="GET"
+      data-path="api/user/articles/feed"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-articles-feed', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-articles-feed"
+                    onclick="tryItOut('GETapi-user-articles-feed');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-articles-feed"
+                    onclick="cancelTryOut('GETapi-user-articles-feed');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-articles-feed"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/articles/feed</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-articles-feed"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-articles-feed"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>q</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="q"                data-endpoint="GETapi-user-articles-feed"
+               value="eveniet"
+               data-component="body">
+    <br>
+<p>Example: <code>eveniet</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-user-articles-feed"
+               value="16"
+               data-component="body">
+    <br>
+<p>Example: <code>16</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-user-articles-feed"
+               value="15"
+               data-component="body">
+    <br>
+<p>Example: <code>15</code></p>
+        </div>
+        </form>
+
+                    <h2 id="user-articles-GETapi-user-articles">All articles</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-articles">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user/articles" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"q\": \"id\",
+    \"per_page\": 5,
+    \"page\": 1,
+    \"sources\": [
+        \"quibusdam\"
+    ],
+    \"categories\": [
+        \"odit\"
+    ],
+    \"authors\": [
+        \"quod\"
+    ]
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/articles"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "q": "id",
+    "per_page": 5,
+    "page": 1,
+    "sources": [
+        "quibusdam"
+    ],
+    "categories": [
+        "odit"
+    ],
+    "authors": [
+        "quod"
+    ]
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-articles">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-articles" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-articles"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-articles"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-articles" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-articles">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-articles" data-method="GET"
+      data-path="api/user/articles"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-articles', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-articles"
+                    onclick="tryItOut('GETapi-user-articles');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-articles"
+                    onclick="cancelTryOut('GETapi-user-articles');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-articles"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/articles</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-articles"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-articles"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>q</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="q"                data-endpoint="GETapi-user-articles"
+               value="id"
+               data-component="body">
+    <br>
+<p>Example: <code>id</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-user-articles"
+               value="5"
+               data-component="body">
+    <br>
+<p>Example: <code>5</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-user-articles"
+               value="1"
+               data-component="body">
+    <br>
+<p>Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>sources</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="sources[0]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="sources[1]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categories</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categories[0]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="categories[1]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>authors</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="authors[0]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="authors[1]"                data-endpoint="GETapi-user-articles"
+               data-component="body">
+    <br>
+
+        </div>
+        </form>
+
+                <h1 id="user-feeds">User feeds</h1>
+
+    <p>API endpoints for managing user feeds</p>
+
+                                <h2 id="user-feeds-PUTapi-user-userFeed-config">Update feed config</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-user-userFeed-config">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost/api/user/userFeed/config" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"sources\": [
+        \"et\"
+    ],
+    \"categories\": [
+        \"sit\"
+    ],
+    \"authors\": [
+        \"rerum\"
+    ]
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/userFeed/config"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "sources": [
+        "et"
+    ],
+    "categories": [
+        "sit"
+    ],
+    "authors": [
+        "rerum"
+    ]
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-user-userFeed-config">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-user-userFeed-config" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-user-userFeed-config"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-user-userFeed-config"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-user-userFeed-config" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-user-userFeed-config">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-user-userFeed-config" data-method="PUT"
+      data-path="api/user/userFeed/config"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-user-userFeed-config', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-user-userFeed-config"
+                    onclick="tryItOut('PUTapi-user-userFeed-config');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-user-userFeed-config"
+                    onclick="cancelTryOut('PUTapi-user-userFeed-config');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-user-userFeed-config"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/user/userFeed/config</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-user-userFeed-config"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-user-userFeed-config"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>sources</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="sources[0]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="sources[1]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categories</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categories[0]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="categories[1]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>authors</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="authors[0]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="authors[1]"                data-endpoint="PUTapi-user-userFeed-config"
+               data-component="body">
+    <br>
+
+        </div>
+        </form>
+
+                    <h2 id="user-feeds-GETapi-user-userFeed">GET api/user/userFeed</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-userFeed">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user/userFeed" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/userFeed"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-userFeed">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-userFeed" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-userFeed"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-userFeed"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-userFeed" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-userFeed">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-userFeed" data-method="GET"
+      data-path="api/user/userFeed"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-userFeed', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-userFeed"
+                    onclick="tryItOut('GETapi-user-userFeed');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-userFeed"
+                    onclick="cancelTryOut('GETapi-user-userFeed');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-userFeed"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/userFeed</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-userFeed"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-userFeed"
                value="application/json"
                data-component="header">
     <br>

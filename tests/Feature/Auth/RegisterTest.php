@@ -15,9 +15,10 @@ class RegisterTest extends TestCase
     /** @test */
     public function user_can_register_with_valid_data()
     {
+        $email = 'john@example.com';
         $payload = [
             'name' => 'John Doe',
-            'email' => 'john@example.com',
+            'email' => $email,
             'password' => 'password123',
             'password_confirmation' => 'password123',
         ];
@@ -36,13 +37,19 @@ class RegisterTest extends TestCase
             ->assertJson([
                 'token_type' => 'Bearer',
                 'user' => [
-                    'email' => 'john@example.com',
+                    'email' => $email,
                     'name' => 'John Doe',
                 ],
             ]);
 
         $this->assertDatabaseHas('users', [
-            'email' => 'john@example.com',
+            'email' => $email,
+        ]);
+
+        $user = User::query()->where('email', $email)->first();
+        $this->assertDatabaseHas('user_feeds', [
+            'user_id' => $user->id,
+            'is_default' => true
         ]);
     }
 

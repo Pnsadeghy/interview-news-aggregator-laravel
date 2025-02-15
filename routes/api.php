@@ -1,6 +1,8 @@
 <?php
 
 use \App\Http\Controllers\AuthController;
+use App\Http\Controllers\User\ArticlesController;
+use App\Http\Controllers\User\UserFeedsController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')
@@ -17,5 +19,9 @@ Route::prefix('auth')
 Route::prefix('user')
     ->name('user.')
     ->middleware(['auth:sanctum'])->group(function () {
-        
+        Route::get("articles/feed", [ArticlesController::class, "feed"])->name("articles.feed");
+        Route::apiResource("articles", ArticlesController::class)->only(["index"]);
+
+        Route::put("userFeed/config", [UserFeedsController::class, "updateConfig"])->name("userFeeds.update.config");
+        Route::apiSingleton("userFeed", UserFeedsController::class)->only(["show"]);
 });

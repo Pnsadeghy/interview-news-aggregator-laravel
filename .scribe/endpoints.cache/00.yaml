@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: toby06@example.net
+        example: phyllis72@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'minimum character length is 6'
         required: true
-        example: "p`Gze'gODwefj"
+        example: 'Qi,jc,mQT\LMGo/kS'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: toby06@example.net
-      password: "p`Gze'gODwefj"
+      email: phyllis72@example.net
+      password: 'Qi,jc,mQT\LMGo/kS'
     fileParameters: []
     responses:
       -
@@ -100,7 +100,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: dolor
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: qmills@example.org
+        example: vilma.berge@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '7JB)yzhh&d)'
+        example: ');/U@U(,EK''`e"^d'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,17 +130,17 @@ endpoints:
         name: password_confirmation
         description: ''
         required: true
-        example: dicta
+        example: recusandae
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: dolor
-      email: qmills@example.org
-      password: '7JB)yzhh&d)'
-      password_confirmation: dicta
+      name: et
+      email: vilma.berge@example.com
+      password: ');/U@U(,EK''`e"^d'
+      password_confirmation: recusandae
     fileParameters: []
     responses:
       -

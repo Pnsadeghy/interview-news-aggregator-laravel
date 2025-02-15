@@ -41,7 +41,6 @@ class Article extends Model
         ];
     }
 
-
     /**
      * Generate the slug from the title.
      */

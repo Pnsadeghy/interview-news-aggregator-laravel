@@ -33,36 +33,6 @@ class ResourceRepository implements IResourceRepository
     {
     }
 
-    protected function searchHelper(string $search, array $filters): void {
-        if (empty($search)) return;
-
-        $this->model = $this->model->where(function ($query) use ($search, $filters) {
-            foreach ($filters as $filter) {
-                $query->orWhere($filter, 'like', "%$search%");
-            }
-        });
-    }
-
-    protected function makeModel(string $modelClass): void
-    {
-        if (class_exists($modelClass)
-            && is_subclass_of(
-                $modelClass,
-                Model::class
-            )) {
-            $this->model = $modelClass::query();
-        } else {
-            throw new InvalidArgumentException(
-                'Invalid Model Class: '.$modelClass
-            );
-        }
-    }
-
-    protected function getModel(): Builder
-    {
-        return $this->model;
-    }
-
     public function find(Model|string $model, array $columns = ['*']): Model
     {
         if (is_string($model)) {
@@ -170,5 +140,37 @@ class ResourceRepository implements IResourceRepository
         }
 
         return $result;
+    }
+
+
+
+    protected function searchHelper(string $search, array $filters): void {
+        if (empty($search)) return;
+
+        $this->model = $this->model->where(function ($query) use ($search, $filters) {
+            foreach ($filters as $filter) {
+                $query->orWhere($filter, 'like', "%$search%");
+            }
+        });
+    }
+
+    protected function makeModel(string $modelClass): void
+    {
+        if (class_exists($modelClass)
+            && is_subclass_of(
+                $modelClass,
+                Model::class
+            )) {
+            $this->model = $modelClass::query();
+        } else {
+            throw new InvalidArgumentException(
+                'Invalid Model Class: '.$modelClass
+            );
+        }
+    }
+
+    protected function getModel(): Builder
+    {
+        return $this->model;
     }
 }
