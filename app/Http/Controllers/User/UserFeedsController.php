@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Feed\UserFeedConfigUpdateRequest;
 use App\Http\Resources\UserFeed\UserFeedResource;
 use App\Repositories\Interfaces\IUserFeedRepository;
-use App\Utils\Controllers\ResourceController;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -16,11 +16,9 @@ use Illuminate\Http\Request;
  *
  * @authenticated
  */
-class UserFeedsController extends ResourceController
+class UserFeedsController extends Controller
 {
-    public function __construct(IUserFeedRepository $repository) {
-        parent::__construct($repository);
-    }
+    public function __construct(protected IUserFeedRepository $repository) {}
 
     /**
      * Get feed

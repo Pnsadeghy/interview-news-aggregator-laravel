@@ -12,9 +12,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 /**
- * @group User Articles
+ * @group Articles
  *
- * API endpoints for managing user articles
+ * API endpoints for managing user Articles
  *
  * @authenticated
  */
@@ -26,7 +26,7 @@ class ArticlesController extends Controller
     }
 
     /**
-     * All articles
+     * All articles for user
      *
      * @bodyParam q string
      * @bodyParam page integer

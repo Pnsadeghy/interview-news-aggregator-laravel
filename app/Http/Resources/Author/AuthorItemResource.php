@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Article;
+namespace App\Http\Resources\Author;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ArticleAuthorResource extends JsonResource
+class AuthorItemResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

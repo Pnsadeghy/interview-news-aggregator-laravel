@@ -2,6 +2,9 @@
 
 namespace App\Http\Resources\Article;
 
+use App\Http\Resources\Author\AuthorItemResource;
+use App\Http\Resources\Category\CategoryItemResource;
+use App\Http\Resources\NewsSource\NewsSourceItemResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -23,9 +26,9 @@ class ArticleItemResource extends JsonResource
             "body" => $this->body,
             "image" => $this->image_url,
             "published_at" => $this->published_at,
-            'source' => new ArticleNewsSourceResource($this->newsSource),
-            "categories" => ArticleCategoryResource::collection($this->categories),
-            "authors" => ArticleCategoryResource::collection($this->authors)
+            'source' => new NewsSourceItemResource($this->newsSource),
+            "categories" => CategoryItemResource::collection($this->categories),
+            "authors" => AuthorItemResource::collection($this->authors)
         ];
     }
 }
