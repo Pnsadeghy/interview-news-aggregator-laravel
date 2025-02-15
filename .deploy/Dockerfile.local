@@ -14,13 +14,12 @@ COPY .deploy/php.ini /usr/local/etc/php/
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-COPY .deploy/entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY .deploy/entrypoint.local.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.local.sh
 
 WORKDIR /var/www/html
-COPY . .
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.local.sh"]
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
 
 USER $user
