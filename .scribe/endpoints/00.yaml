@@ -30,7 +30,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: ppredovic@example.net
+        example: jesus05@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -40,15 +40,15 @@ endpoints:
         name: password
         description: 'minimum character length is 6'
         required: true
-        example: 'CVJ3B,C'
+        example: "Y^_4ux'1oU"
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: ppredovic@example.net
-      password: 'CVJ3B,C'
+      email: jesus05@example.org
+      password: "Y^_4ux'1oU"
     fileParameters: []
     responses:
       -
@@ -98,7 +98,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: explicabo
+        example: autem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -108,7 +108,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: selmer.waters@example.org
+        example: ladarius.miller@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -118,7 +118,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: p=(m9hz
+        example: '#XDsCK)&,PJ|,S'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -128,17 +128,17 @@ endpoints:
         name: password_confirmation
         description: ''
         required: true
-        example: cum
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: explicabo
-      email: selmer.waters@example.org
-      password: p=(m9hz
-      password_confirmation: cum
+      name: autem
+      email: ladarius.miller@example.org
+      password: '#XDsCK)&,PJ|,S'
+      password_confirmation: voluptatem
     fileParameters: []
     responses:
       -
