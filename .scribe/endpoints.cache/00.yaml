@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: phyllis72@example.net
+        example: ppredovic@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'minimum character length is 6'
         required: true
-        example: 'Qi,jc,mQT\LMGo/kS'
+        example: 'CVJ3B,C'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: phyllis72@example.net
-      password: 'Qi,jc,mQT\LMGo/kS'
+      email: ppredovic@example.net
+      password: 'CVJ3B,C'
     fileParameters: []
     responses:
       -
@@ -100,7 +100,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: et
+        example: explicabo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: vilma.berge@example.com
+        example: selmer.waters@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ');/U@U(,EK''`e"^d'
+        example: p=(m9hz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,17 +130,17 @@ endpoints:
         name: password_confirmation
         description: ''
         required: true
-        example: recusandae
+        example: cum
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: et
-      email: vilma.berge@example.com
-      password: ');/U@U(,EK''`e"^d'
-      password_confirmation: recusandae
+      name: explicabo
+      email: selmer.waters@example.org
+      password: p=(m9hz
+      password_confirmation: cum
     fileParameters: []
     responses:
       -

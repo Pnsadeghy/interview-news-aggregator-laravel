@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Models\Article;
 use App\Repositories\Interfaces\IArticleRepository;
 use App\Utils\Repositories\ResourceRepository;
-use function Symfony\Component\Translation\t;
+use App\Utils\QueryHelper;
 
 class ArticleRepository extends ResourceRepository implements IArticleRepository
 {
@@ -14,7 +14,7 @@ class ArticleRepository extends ResourceRepository implements IArticleRepository
     public function fullSearch(string $q, array $newsSource, array $categories, array $authors): IArticleRepository
     {
         if ($q !== "") {
-            $this->model = $this->model->whereFullText(['title', 'description', 'body'], $q);
+            $this->model = QueryHelper::fullTextSearch($this->model, $q, ['title', 'description', 'body']);
         }
 
         if (!empty($newsSource)) {

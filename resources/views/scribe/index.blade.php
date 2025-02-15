@@ -87,11 +87,11 @@
                     <a href="#user-articles">User Articles</a>
                 </li>
                                     <ul id="tocify-subheader-user-articles" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="user-articles-GETapi-user-articles-feed">
-                                <a href="#user-articles-GETapi-user-articles-feed">User feed articles</a>
+                                                    <li class="tocify-item level-2" data-unique="user-articles-POSTapi-user-articles-feed">
+                                <a href="#user-articles-POSTapi-user-articles-feed">User feed articles</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="user-articles-GETapi-user-articles">
-                                <a href="#user-articles-GETapi-user-articles">All articles</a>
+                                                                                <li class="tocify-item level-2" data-unique="user-articles-POSTapi-user-articles">
+                                <a href="#user-articles-POSTapi-user-articles">All articles</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -104,7 +104,7 @@
                                 <a href="#user-feeds-PUTapi-user-userFeed-config">Update feed config</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="user-feeds-GETapi-user-userFeed">
-                                <a href="#user-feeds-GETapi-user-userFeed">GET api/user/userFeed</a>
+                                <a href="#user-feeds-GETapi-user-userFeed">Get feed</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -156,8 +156,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"phyllis72@example.net\",
-    \"password\": \"Qi,jc,mQT\\\\LMGo\\/kS\"
+    \"email\": \"ppredovic@example.net\",
+    \"password\": \"CVJ3B,C\"
 }"
 </code></pre></div>
 
@@ -173,8 +173,8 @@ const headers = {
 };
 
 let body = {
-    "email": "phyllis72@example.net",
-    "password": "Qi,jc,mQT\\LMGo\/kS"
+    "email": "ppredovic@example.net",
+    "password": "CVJ3B,C"
 };
 
 fetch(url, {
@@ -277,10 +277,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-login"
-               value="phyllis72@example.net"
+               value="ppredovic@example.net"
                data-component="body">
     <br>
-<p>Example: <code>phyllis72@example.net</code></p>
+<p>Example: <code>ppredovic@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -288,10 +288,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-login"
-               value="Qi,jc,mQT\LMGo/kS"
+               value="CVJ3B,C"
                data-component="body">
     <br>
-<p>minimum character length is 6 Example: <code>Qi,jc,mQT\LMGo/kS</code></p>
+<p>minimum character length is 6 Example: <code>CVJ3B,C</code></p>
         </div>
         </form>
 
@@ -312,10 +312,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"et\",
-    \"email\": \"vilma.berge@example.com\",
-    \"password\": \");\\/U@U(,EK\'`e\\\"^d\",
-    \"password_confirmation\": \"recusandae\"
+    \"name\": \"explicabo\",
+    \"email\": \"selmer.waters@example.org\",
+    \"password\": \"p=(m9hz\",
+    \"password_confirmation\": \"cum\"
 }"
 </code></pre></div>
 
@@ -331,10 +331,10 @@ const headers = {
 };
 
 let body = {
-    "name": "et",
-    "email": "vilma.berge@example.com",
-    "password": ");\/U@U(,EK'`e\"^d",
-    "password_confirmation": "recusandae"
+    "name": "explicabo",
+    "email": "selmer.waters@example.org",
+    "password": "p=(m9hz",
+    "password_confirmation": "cum"
 };
 
 fetch(url, {
@@ -437,10 +437,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-auth-register"
-               value="et"
+               value="explicabo"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>explicabo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -448,10 +448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-register"
-               value="vilma.berge@example.com"
+               value="selmer.waters@example.org"
                data-component="body">
     <br>
-<p>Example: <code>vilma.berge@example.com</code></p>
+<p>Example: <code>selmer.waters@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -459,10 +459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-register"
-               value=");/U@U(,EK'`e"^d"
+               value="p=(m9hz"
                data-component="body">
     <br>
-<p>Example: <code>);/U@U(,EK'</code>e&quot;^d`</p>
+<p>Example: <code>p=(m9hz</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -470,10 +470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password_confirmation"                data-endpoint="POSTapi-auth-register"
-               value="recusandae"
+               value="cum"
                data-component="body">
     <br>
-<p>Example: <code>recusandae</code></p>
+<p>Example: <code>cum</code></p>
         </div>
         </form>
 
@@ -590,7 +590,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     <p>API endpoints for managing user articles</p>
 
-                                <h2 id="user-articles-GETapi-user-articles-feed">User feed articles</h2>
+                                <h2 id="user-articles-POSTapi-user-articles-feed">User feed articles</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -598,19 +598,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 
 
-<span id="example-requests-GETapi-user-articles-feed">
+<span id="example-requests-POSTapi-user-articles-feed">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user/articles/feed" \
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/user/articles/feed" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"q\": \"eveniet\",
-    \"per_page\": 16,
-    \"page\": 15
+    \"q\": \"aliquam\",
+    \"per_page\": 20,
+    \"page\": 5
 }"
 </code></pre></div>
 
@@ -626,74 +626,122 @@ const headers = {
 };
 
 let body = {
-    "q": "eveniet",
-    "per_page": 16,
-    "page": 15
+    "q": "aliquam",
+    "per_page": 20,
+    "page": 5
 };
 
 fetch(url, {
-    method: "GET",
+    method: "POST",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-GETapi-user-articles-feed">
+<span id="example-responses-POSTapi-user-articles-feed">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;uuid&quot;,
+            &quot;slug&quot;: &quot;slug&quot;,
+            &quot;url&quot;: &quot;url&quot;,
+            &quot;title&quot;: &quot;Title&quot;,
+            &quot;description&quot;: &quot;Description&quot;,
+            &quot;body&quot;: &quot;Body&quot;,
+            &quot;image&quot;: &quot;Image url&quot;,
+            &quot;published_at&quot;: &quot;2025-02-15T18:41:01.000000Z&quot;,
+            &quot;source&quot;: {
+                &quot;id&quot;: &quot;Source uuid&quot;,
+                &quot;title&quot;: &quot;Source title&quot;,
+                &quot;url&quot;: &quot;Source website&quot;
+            },
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: &quot;Category uuid&quot;,
+                    &quot;title&quot;: &quot;Category title&quot;
+                }
+            ],
+            &quot;authors&quot;: [
+                {
+                    &quot;id&quot;: &quot;Author uuid&quot;,
+                    &quot;name&quot;: &quot;Author name&quot;,
+                    &quot;url&quot;: &quot;Author url&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;uuid&quot;,
+            &quot;slug&quot;: &quot;slug&quot;,
+            &quot;url&quot;: &quot;url&quot;,
+            &quot;title&quot;: &quot;Title&quot;,
+            &quot;description&quot;: null,
+            &quot;body&quot;: null,
+            &quot;image&quot;: null,
+            &quot;published_at&quot;: &quot;2025-02-15T18:41:01.000000Z&quot;,
+            &quot;source&quot;: null,
+            &quot;categories&quot;: [],
+            &quot;authors&quot;: []
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;per_page&quot;: 10,
+        &quot;total&quot;: 2
+    }
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-user-articles-feed" hidden>
+<span id="execution-results-POSTapi-user-articles-feed" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-user-articles-feed"></span>:
+                id="execution-response-status-POSTapi-user-articles-feed"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-user-articles-feed"
+    <pre class="json"><code id="execution-response-content-POSTapi-user-articles-feed"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-user-articles-feed" hidden>
+<span id="execution-error-POSTapi-user-articles-feed" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-user-articles-feed">
+    <pre><code id="execution-error-message-POSTapi-user-articles-feed">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-user-articles-feed" data-method="GET"
+<form id="form-POSTapi-user-articles-feed" data-method="POST"
       data-path="api/user/articles/feed"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-articles-feed', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-user-articles-feed', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-user-articles-feed"
-                    onclick="tryItOut('GETapi-user-articles-feed');">Try it out ⚡
+                    id="btn-tryout-POSTapi-user-articles-feed"
+                    onclick="tryItOut('POSTapi-user-articles-feed');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-user-articles-feed"
-                    onclick="cancelTryOut('GETapi-user-articles-feed');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-user-articles-feed"
+                    onclick="cancelTryOut('POSTapi-user-articles-feed');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-user-articles-feed"
+                    id="btn-executetryout-POSTapi-user-articles-feed"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-green">GET</small>
+            <small class="badge badge-black">POST</small>
             <b><code>api/user/articles/feed</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
@@ -702,7 +750,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-user-articles-feed"
+                              name="Content-Type"                data-endpoint="POSTapi-user-articles-feed"
                value="application/json"
                data-component="header">
     <br>
@@ -713,7 +761,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-user-articles-feed"
+                              name="Accept"                data-endpoint="POSTapi-user-articles-feed"
                value="application/json"
                data-component="header">
     <br>
@@ -725,37 +773,37 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="q"                data-endpoint="GETapi-user-articles-feed"
-               value="eveniet"
+                              name="q"                data-endpoint="POSTapi-user-articles-feed"
+               value="aliquam"
                data-component="body">
     <br>
-<p>Example: <code>eveniet</code></p>
+<p>Example: <code>aliquam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="per_page"                data-endpoint="GETapi-user-articles-feed"
-               value="16"
+               step="any"               name="per_page"                data-endpoint="POSTapi-user-articles-feed"
+               value="20"
                data-component="body">
     <br>
-<p>Example: <code>16</code></p>
+<p>Example: <code>20</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="page"                data-endpoint="GETapi-user-articles-feed"
-               value="15"
+               step="any"               name="page"                data-endpoint="POSTapi-user-articles-feed"
+               value="5"
                data-component="body">
     <br>
-<p>Example: <code>15</code></p>
+<p>Example: <code>5</code></p>
         </div>
         </form>
 
-                    <h2 id="user-articles-GETapi-user-articles">All articles</h2>
+                    <h2 id="user-articles-POSTapi-user-articles">All articles</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -763,27 +811,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 
 
-<span id="example-requests-GETapi-user-articles">
+<span id="example-requests-POSTapi-user-articles">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user/articles" \
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/user/articles" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"q\": \"id\",
-    \"per_page\": 5,
-    \"page\": 1,
+    \"q\": \"ut\",
+    \"per_page\": 16,
+    \"page\": 12,
     \"sources\": [
-        \"quibusdam\"
+        \"voluptas\"
     ],
     \"categories\": [
-        \"odit\"
+        \"cumque\"
     ],
     \"authors\": [
-        \"quod\"
+        \"nulla\"
     ]
 }"
 </code></pre></div>
@@ -800,83 +848,131 @@ const headers = {
 };
 
 let body = {
-    "q": "id",
-    "per_page": 5,
-    "page": 1,
+    "q": "ut",
+    "per_page": 16,
+    "page": 12,
     "sources": [
-        "quibusdam"
+        "voluptas"
     ],
     "categories": [
-        "odit"
+        "cumque"
     ],
     "authors": [
-        "quod"
+        "nulla"
     ]
 };
 
 fetch(url, {
-    method: "GET",
+    method: "POST",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-GETapi-user-articles">
+<span id="example-responses-POSTapi-user-articles">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;uuid&quot;,
+            &quot;slug&quot;: &quot;slug&quot;,
+            &quot;url&quot;: &quot;url&quot;,
+            &quot;title&quot;: &quot;Title&quot;,
+            &quot;description&quot;: &quot;Description&quot;,
+            &quot;body&quot;: &quot;Body&quot;,
+            &quot;image&quot;: &quot;Image url&quot;,
+            &quot;published_at&quot;: &quot;2025-02-15T18:41:01.000000Z&quot;,
+            &quot;source&quot;: {
+                &quot;id&quot;: &quot;Source uuid&quot;,
+                &quot;title&quot;: &quot;Source title&quot;,
+                &quot;url&quot;: &quot;Source website&quot;
+            },
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: &quot;Category uuid&quot;,
+                    &quot;title&quot;: &quot;Category title&quot;
+                }
+            ],
+            &quot;authors&quot;: [
+                {
+                    &quot;id&quot;: &quot;Author uuid&quot;,
+                    &quot;name&quot;: &quot;Author name&quot;,
+                    &quot;url&quot;: &quot;Author url&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;uuid&quot;,
+            &quot;slug&quot;: &quot;slug&quot;,
+            &quot;url&quot;: &quot;url&quot;,
+            &quot;title&quot;: &quot;Title&quot;,
+            &quot;description&quot;: null,
+            &quot;body&quot;: null,
+            &quot;image&quot;: null,
+            &quot;published_at&quot;: &quot;2025-02-15T18:41:01.000000Z&quot;,
+            &quot;source&quot;: null,
+            &quot;categories&quot;: [],
+            &quot;authors&quot;: []
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;per_page&quot;: 10,
+        &quot;total&quot;: 2
+    }
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-user-articles" hidden>
+<span id="execution-results-POSTapi-user-articles" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-user-articles"></span>:
+                id="execution-response-status-POSTapi-user-articles"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-user-articles"
+    <pre class="json"><code id="execution-response-content-POSTapi-user-articles"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-user-articles" hidden>
+<span id="execution-error-POSTapi-user-articles" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-user-articles">
+    <pre><code id="execution-error-message-POSTapi-user-articles">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-user-articles" data-method="GET"
+<form id="form-POSTapi-user-articles" data-method="POST"
       data-path="api/user/articles"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-articles', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-user-articles', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-user-articles"
-                    onclick="tryItOut('GETapi-user-articles');">Try it out ⚡
+                    id="btn-tryout-POSTapi-user-articles"
+                    onclick="tryItOut('POSTapi-user-articles');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-user-articles"
-                    onclick="cancelTryOut('GETapi-user-articles');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-user-articles"
+                    onclick="cancelTryOut('POSTapi-user-articles');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-user-articles"
+                    id="btn-executetryout-POSTapi-user-articles"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-green">GET</small>
+            <small class="badge badge-black">POST</small>
             <b><code>api/user/articles</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
@@ -885,7 +981,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-user-articles"
+                              name="Content-Type"                data-endpoint="POSTapi-user-articles"
                value="application/json"
                data-component="header">
     <br>
@@ -896,7 +992,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-user-articles"
+                              name="Accept"                data-endpoint="POSTapi-user-articles"
                value="application/json"
                data-component="header">
     <br>
@@ -908,43 +1004,43 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="q"                data-endpoint="GETapi-user-articles"
-               value="id"
+                              name="q"                data-endpoint="POSTapi-user-articles"
+               value="ut"
                data-component="body">
     <br>
-<p>Example: <code>id</code></p>
+<p>Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="per_page"                data-endpoint="GETapi-user-articles"
-               value="5"
+               step="any"               name="per_page"                data-endpoint="POSTapi-user-articles"
+               value="16"
                data-component="body">
     <br>
-<p>Example: <code>5</code></p>
+<p>Example: <code>16</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="page"                data-endpoint="GETapi-user-articles"
-               value="1"
+               step="any"               name="page"                data-endpoint="POSTapi-user-articles"
+               value="12"
                data-component="body">
     <br>
-<p>Example: <code>1</code></p>
+<p>Example: <code>12</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>sources</code></b>&nbsp;&nbsp;
 <small>string[]</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="sources[0]"                data-endpoint="GETapi-user-articles"
+                              name="sources[0]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
         <input type="text" style="display: none"
-               name="sources[1]"                data-endpoint="GETapi-user-articles"
+               name="sources[1]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
     <br>
 
@@ -954,10 +1050,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string[]</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="categories[0]"                data-endpoint="GETapi-user-articles"
+                              name="categories[0]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
         <input type="text" style="display: none"
-               name="categories[1]"                data-endpoint="GETapi-user-articles"
+               name="categories[1]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
     <br>
 
@@ -967,10 +1063,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string[]</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="authors[0]"                data-endpoint="GETapi-user-articles"
+                              name="authors[0]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
         <input type="text" style="display: none"
-               name="authors[1]"                data-endpoint="GETapi-user-articles"
+               name="authors[1]"                data-endpoint="POSTapi-user-articles"
                data-component="body">
     <br>
 
@@ -1000,13 +1096,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"sources\": [
-        \"et\"
+        \"nam\"
     ],
     \"categories\": [
-        \"sit\"
+        \"est\"
     ],
     \"authors\": [
-        \"rerum\"
+        \"et\"
     ]
 }"
 </code></pre></div>
@@ -1024,13 +1120,13 @@ const headers = {
 
 let body = {
     "sources": [
-        "et"
+        "nam"
     ],
     "categories": [
-        "sit"
+        "est"
     ],
     "authors": [
-        "rerum"
+        "et"
     ]
 };
 
@@ -1162,7 +1258,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="user-feeds-GETapi-user-userFeed">GET api/user/userFeed</h2>
+                    <h2 id="user-feeds-GETapi-user-userFeed">Get feed</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1200,19 +1296,25 @@ fetch(url, {
 
 <span id="example-responses-GETapi-user-userFeed">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;Feed uuid&quot;,
+        &quot;title&quot;: &quot;Feed title&quot;,
+        &quot;default&quot;: true
+    },
+    &quot;sources&quot;: [
+        &quot;source uuid&quot;
+    ],
+    &quot;categories&quot;: [
+        &quot;category uuid&quot;
+    ],
+    &quot;authors&quot;: [
+        &quot;author uuid&quot;
+    ]
 }</code>
  </pre>
     </span>

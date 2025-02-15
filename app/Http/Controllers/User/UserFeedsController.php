@@ -22,14 +22,24 @@ class UserFeedsController extends ResourceController
         parent::__construct($repository);
     }
 
-    public function show(Request $request): JsonResponse
+    /**
+     * Get feed
+     *
+     * @responseFile 200 resources/responses/User/Feed/show.json
+     */
+    public function show(Request $request): UserFeedResource
     {
         $userFeed = $request->user()->defaultFeed;
         $filterData = $this->repository->getFeedNewsFilterData($userFeed);
 
-        return response()->json(
-            (new UserFeedResource($userFeed))->additional($filterData)
-        );
+        $resource = new UserFeedResource($userFeed);
+        $resource->additional([
+            'sources' => $filterData->newsSources,
+            'categories' => $filterData->categories,
+            'authors' => $filterData->authors
+        ]);
+
+        return $resource;
     }
 
     /**

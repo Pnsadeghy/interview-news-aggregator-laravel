@@ -19,8 +19,8 @@ Route::prefix('auth')
 Route::prefix('user')
     ->name('user.')
     ->middleware(['auth:sanctum'])->group(function () {
-        Route::get("articles/feed", [ArticlesController::class, "feed"])->name("articles.feed");
-        Route::apiResource("articles", ArticlesController::class)->only(["index"]);
+        Route::post("articles/feed", [ArticlesController::class, "feed"])->name("articles.feed");
+        Route::post("articles", [ArticlesController::class, "index"])->name("articles.index");
 
         Route::put("userFeed/config", [UserFeedsController::class, "updateConfig"])->name("userFeeds.update.config");
         Route::apiSingleton("userFeed", UserFeedsController::class)->only(["show"]);

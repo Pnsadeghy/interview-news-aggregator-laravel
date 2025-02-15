@@ -12,8 +12,7 @@ class LoginTest extends TestCase
 
     private string $url = '/api/auth/login';
 
-    /** @test */
-    public function user_can_login_with_valid_credentials()
+    public function testUserCanLoginWithValidCredentials()
     {
         $user = User::factory()->create([
             'email' => 'test@example.com',
@@ -43,8 +42,7 @@ class LoginTest extends TestCase
             ]);
     }
 
-    /** @test */
-    public function user_cannot_login_with_invalid_credentials()
+    public function testUserCannotLoginWithInvalidCredentials()
     {
         User::factory()->create([
             'email' => 'test@example.com',

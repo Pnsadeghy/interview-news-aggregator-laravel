@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\UserFeed;
+namespace App\Http\Resources\Article;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserFeedResource extends JsonResource
+class ArticleCategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +16,7 @@ class UserFeedResource extends JsonResource
     {
         return [
             "id" => $this->id,
-            "title" => $this->title,
-            "default" => $this->default
+            "title" => $this->title
         ];
     }
 }

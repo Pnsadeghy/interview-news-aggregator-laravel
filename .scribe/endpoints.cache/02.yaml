@@ -33,7 +33,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - et
+          - nam
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -44,7 +44,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - sit
+          - est
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -55,7 +55,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - rerum
+          - et
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -63,11 +63,11 @@ endpoints:
         custom: []
     cleanBodyParameters:
       sources:
-        - et
+        - nam
       categories:
-        - sit
+        - est
       authors:
-        - rerum
+        - et
     fileParameters: []
     responses:
       -
@@ -93,7 +93,7 @@ endpoints:
         API endpoints for managing user feeds
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get feed'
       description: ''
       authenticated: true
       custom: []
@@ -109,13 +109,20 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
+        status: 200
+        content: |
+          {
+              "data": {
+                  "id": "Feed uuid",
+                  "title": "Feed title",
+                  "default": true
+              },
+              "sources": ["source uuid"],
+              "categories": ["category uuid"],
+              "authors": ["author uuid"]
+          }
+        headers: []
+        description: ''
         custom: []
     responseFields: []
     auth: []

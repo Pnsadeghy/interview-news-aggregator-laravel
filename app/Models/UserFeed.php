@@ -20,4 +20,19 @@ class UserFeed extends Model
     protected $attributes = [
         'is_default' => false
     ];
+
+    public function newsSources(): BelongsToMany
+    {
+        return $this->belongsToMany(NewsSource::class, "user_feed_news_sources");
+    }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class, "user_feed_categories");
+    }
+
+    public function authors(): BelongsToMany
+    {
+        return $this->belongsToMany(Author::class, "user_feed_authors");
+    }
 }

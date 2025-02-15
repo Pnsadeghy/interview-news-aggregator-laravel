@@ -1,5 +1,47 @@
 {
     "data": [
-
-    ]
+        {
+            "id": "uuid",
+            "slug": "slug",
+            "url": "url",
+            "title": "Title",
+            "description": "Description",
+            "body": "Body",
+            "image": "Image url",
+            "published_at": "2025-02-15T18:41:01.000000Z",
+            "source": {
+                "id": "Source uuid",
+                "title": "Source title",
+                "url": "Source website"
+            },
+            "categories": [{
+                "id": "Category uuid",
+                "title": "Category title"
+            }],
+            "authors": [{
+                "id": "Author uuid",
+                "name": "Author name",
+                "url": "Author url"
+            }]
+        },
+        {
+            "id": "uuid",
+            "slug": "slug",
+            "url": "url",
+            "title": "Title",
+            "description": null,
+            "body": null,
+            "image": null,
+            "published_at": "2025-02-15T18:41:01.000000Z",
+            "source": null,
+            "categories": [],
+            "authors": []
+        }
+    ],
+    "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 10,
+        "total": 2
+    }
 }

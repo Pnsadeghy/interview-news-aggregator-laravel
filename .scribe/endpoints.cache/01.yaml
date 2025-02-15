@@ -7,7 +7,7 @@ description: |-
 endpoints:
   -
     httpMethods:
-      - GET
+      - POST
     uri: api/user/articles/feed
     metadata:
       groupName: 'User Articles'
@@ -32,7 +32,7 @@ endpoints:
         name: q
         description: ''
         required: false
-        example: eveniet
+        example: aliquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,7 +42,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 16
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -52,16 +52,16 @@ endpoints:
         name: page
         description: ''
         required: false
-        example: 15
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      q: eveniet
-      per_page: 16
-      page: 15
+      q: aliquam
+      per_page: 20
+      page: 5
     fileParameters: []
     responses:
       -
@@ -69,8 +69,50 @@ endpoints:
         content: |
           {
               "data": [
-
-              ]
+                  {
+                      "id": "uuid",
+                      "slug": "slug",
+                      "url": "url",
+                      "title": "Title",
+                      "description": "Description",
+                      "body": "Body",
+                      "image": "Image url",
+                      "published_at": "2025-02-15T18:41:01.000000Z",
+                      "source": {
+                          "id": "Source uuid",
+                          "title": "Source title",
+                          "url": "Source website"
+                      },
+                      "categories": [{
+                          "id": "Category uuid",
+                          "title": "Category title"
+                      }],
+                      "authors": [{
+                          "id": "Author uuid",
+                          "name": "Author name",
+                          "url": "Author url"
+                      }]
+                  },
+                  {
+                      "id": "uuid",
+                      "slug": "slug",
+                      "url": "url",
+                      "title": "Title",
+                      "description": null,
+                      "body": null,
+                      "image": null,
+                      "published_at": "2025-02-15T18:41:01.000000Z",
+                      "source": null,
+                      "categories": [],
+                      "authors": []
+                  }
+              ],
+              "meta": {
+                  "current_page": 1,
+                  "last_page": 1,
+                  "per_page": 10,
+                  "total": 2
+              }
           }
         headers: []
         description: ''
@@ -83,7 +125,7 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
+      - POST
     uri: api/user/articles
     metadata:
       groupName: 'User Articles'
@@ -108,7 +150,7 @@ endpoints:
         name: q
         description: ''
         required: false
-        example: id
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -118,7 +160,7 @@ endpoints:
         name: per_page
         description: ''
         required: false
-        example: 5
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -128,7 +170,7 @@ endpoints:
         name: page
         description: ''
         required: false
-        example: 1
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -139,7 +181,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - quibusdam
+          - voluptas
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -150,7 +192,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - odit
+          - cumque
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -161,22 +203,22 @@ endpoints:
         description: ''
         required: false
         example:
-          - quod
+          - nulla
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      q: id
-      per_page: 5
-      page: 1
+      q: ut
+      per_page: 16
+      page: 12
       sources:
-        - quibusdam
+        - voluptas
       categories:
-        - odit
+        - cumque
       authors:
-        - quod
+        - nulla
     fileParameters: []
     responses:
       -
@@ -184,8 +226,50 @@ endpoints:
         content: |
           {
               "data": [
-
-              ]
+                  {
+                      "id": "uuid",
+                      "slug": "slug",
+                      "url": "url",
+                      "title": "Title",
+                      "description": "Description",
+                      "body": "Body",
+                      "image": "Image url",
+                      "published_at": "2025-02-15T18:41:01.000000Z",
+                      "source": {
+                          "id": "Source uuid",
+                          "title": "Source title",
+                          "url": "Source website"
+                      },
+                      "categories": [{
+                          "id": "Category uuid",
+                          "title": "Category title"
+                      }],
+                      "authors": [{
+                          "id": "Author uuid",
+                          "name": "Author name",
+                          "url": "Author url"
+                      }]
+                  },
+                  {
+                      "id": "uuid",
+                      "slug": "slug",
+                      "url": "url",
+                      "title": "Title",
+                      "description": null,
+                      "body": null,
+                      "image": null,
+                      "published_at": "2025-02-15T18:41:01.000000Z",
+                      "source": null,
+                      "categories": [],
+                      "authors": []
+                  }
+              ],
+              "meta": {
+                  "current_page": 1,
+                  "last_page": 1,
+                  "per_page": 10,
+                  "total": 2
+              }
           }
         headers: []
         description: ''
