@@ -2,32 +2,63 @@
 
 namespace App\Services\Readers;
 
+use App\DTO\NewsReaderArticle;
 use App\Services\AbstractNewsReaderService;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class NewsApiAiReader extends AbstractNewsReaderService
 {
-    public function fetchArticles(): array
+    public function setValues(): void
     {
-        #TODO Add dateStart query (get date from cache) to ignores previously read news
+        $this->fromDateQueryName = "dateStart";
+    }
+
+    public function fetchArticles(): Collection
+    {
         $query = [
             'action' => 'getArticles',
             'resultType' => 'articles',
             'articlesCount' => 20
         ];
 
-        $response = $this->postHttpRequest($query);
+        return $this->generateArticleList(
+            $this->postHttpRequest($query),
+            "articles.results",
+            function ($article) {
+                $sourceTitle = "";
+                $sourceUrl = "";
+                $categories = [];
 
-        if (!$response->successful()) {
-            Log::error(json_encode($response->json()));
-            return [];
-        }
+                if ($article['source']) {
+                    $sourceTitle = $article['source']['title'];
+                    $sourceUrl = $article['source']['uri'];
+                    if ($article['source']['dataType']) {
+                        $categories = [$article['source']['dataType']];
+                    }
+                }
 
-        $articles = $response->json('articles');
-        #TODO add lastNews date in cache
+                $authors = array_map(function ($author) use ($sourceTitle, $sourceUrl) {
+                    return [
+                        "name" => $author['name'],
+                        "url" => $author['uri'],
+                        "source_title" => $sourceTitle
+                    ];
+                }, $article['authors']);
 
-        Log::debug("NewsApi.ai Articles fetched: " . count($articles));
-
-        return $articles;
+                return new NewsReaderArticle(
+                    $article['title'],
+                    $article['url'],
+                    $article['image'],
+                    Str::limit($article['body'], 250),
+                    $article['body'],
+                    $article['dateTimePub'],
+                    $sourceTitle,
+                    $sourceUrl,
+                    $categories,
+                    $authors
+                );
+            }
+        );
     }
 }

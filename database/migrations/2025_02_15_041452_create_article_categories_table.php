@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignUuid('article_id')->constrained();
             $table->foreignUuid('category_id')->constrained();
 
+            $table->unique(['article_id', 'category_id']);
+
             $table->timestamps();
         });
     }

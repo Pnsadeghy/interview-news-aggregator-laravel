@@ -2,31 +2,38 @@
 
 namespace App\Services\Readers;
 
+use App\DTO\NewsReaderArticle;
 use App\Services\AbstractNewsReaderService;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Collection;
 
 class TheGuardianReader extends AbstractNewsReaderService
 {
 
-    public function fetchArticles(): array
+    public function setValues(): void
     {
         $this->apiKeyQueryName = "api-key";
+        $this->fromDateQueryName = "from-date";
+    }
 
-        #TODO Add from-date query (get date from cache) to ignores previously read news
-        $query = [];
-
-        $response = $this->getHttpRequest($query);
-
-        if (!$response->successful()) {
-            Log::error(json_encode($response->json()));
-            return [];
-        }
-
-        $articles = $response->json('response.results');
-        #TODO add lastNews date in cache
-
-        Log::info("TheGuardian.com Articles fetched: " . count($articles));
-
-        return $articles;
+    public function fetchArticles(): Collection
+    {
+        return $this->generateArticleList(
+            $this->getHttpRequest(),
+            "response.results",
+            function ($article) {
+                return new NewsReaderArticle(
+                    $article['webTitle'],
+                    $article['webUrl'],
+                    "",
+                    "",
+                    "",
+                    $article['webPublicationDate'],
+                    "The Guardian",
+                    "https://www.theguardian.com/",
+                    [$article["sectionName"]],
+                    []
+                );
+            }
+        );
     }
 }

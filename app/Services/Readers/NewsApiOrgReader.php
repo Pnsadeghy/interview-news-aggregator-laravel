@@ -2,29 +2,44 @@
 
 namespace App\Services\Readers;
 
+use App\DTO\NewsReaderArticle;
 use App\Services\AbstractNewsReaderService;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Collection;
 
 class NewsApiOrgReader extends AbstractNewsReaderService
 {
-    public function fetchArticles(): array
+    public function setValues(): void
     {
-        #TODO Add from query (get date from cache) to ignores previously read news
-        $query = [];
+        $this->fromDateQueryName = "from";
+    }
 
-        $response = $this->getHttpRequest($query);
+    public function fetchArticles(): Collection
+    {
+        return $this->generateArticleList(
+            $this->getHttpRequest(),
+            "articles",
+            function ($article) {
+                $sourceTitle = $article['source'] ? $article['source']['name'] : '';
 
-        if (!$response->successful()) {
-            Log::error(json_encode($response->json()));
-            return [];
-        }
-
-        $articles = $response->json('articles');
-        #TODO add lastNews date in cache
-
-        Log::info("NewsApi.org Articles fetched: " . count($articles));
-
-        return $articles;
+                return new NewsReaderArticle(
+                    $article['title'],
+                    $article['url'],
+                    $article['urlToImage'],
+                    $article['description'],
+                    $article['content'],
+                    $article['publishedAt'],
+                    $sourceTitle,
+                    "",
+                    [],
+                    $article["author"] ? array_map(function ($author) use ($sourceTitle) {
+                        return [
+                          "name" => $author,
+                          "url" => "",
+                          "source_title" => $sourceTitle
+                        ];
+                    }, explode(", ", $article["author"])) : []
+                );
+            }
+        );
     }
 }
