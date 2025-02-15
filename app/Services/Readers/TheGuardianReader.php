@@ -27,6 +27,6 @@ class TheGuardianReader extends AbstractNewsReaderService
 
         Log::info("TheGuardian.com Articles fetched: " . count($articles));
 
-        return [];
+        return $articles;
     }
 }

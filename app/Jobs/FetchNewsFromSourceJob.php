@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use App\Repositories\Interfaces\INewsSourceRepository;
+use App\Repositories\Interfaces\INewsReaderSourceRepository;
 use App\Services\Interfaces\INewsReaderService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
@@ -20,7 +20,7 @@ class FetchNewsFromSourceJob
     /**
      * Execute the job.
      */
-    public function handle(INewsSourceRepository $newsSourceRepository): void
+    public function handle(INewsReaderSourceRepository $newsSourceRepository): void
     {
         $sources = $newsSourceRepository->getListFromCache();
         $reader = $this->getReader($sources);
@@ -30,8 +30,6 @@ class FetchNewsFromSourceJob
         }
 
         $articles = $reader->fetchArticles();
-
-
     }
 
     private function getReader(Collection $sources): INewsReaderService|null

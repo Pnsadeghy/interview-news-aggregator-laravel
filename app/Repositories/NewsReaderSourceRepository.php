@@ -2,15 +2,15 @@
 
 namespace App\Repositories;
 
-use App\Repositories\Interfaces\INewsSourceRepository;
+use App\Repositories\Interfaces\INewsReaderSourceRepository;
 use App\Utils\Repositories\ResourceRepository;
-use App\Models\NewsSource;
+use App\Models\NewsReaderSource;
 use Illuminate\Support\Collection;
 
-class NewsSourceRepository extends ResourceRepository implements INewsSourceRepository
+class NewsReaderSourceRepository extends ResourceRepository implements INewsReaderSourceRepository
 {
-    protected string $modelClass = NewsSource::class;
-    private const CACHE_KEY = 'news-sources';
+    protected string $modelClass = NewsReaderSource::class;
+    private const CACHE_KEY = 'news-reader-sources';
 
     public function getListFromCache(): Collection
     {

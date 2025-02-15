@@ -25,6 +25,6 @@ class NewsApiOrgReader extends AbstractNewsReaderService
 
         Log::info("NewsApi.org Articles fetched: " . count($articles));
 
-        return [];
+        return $articles;
     }
 }

@@ -28,6 +28,6 @@ class NewsApiAiReader extends AbstractNewsReaderService
 
         Log::debug("NewsApi.ai Articles fetched: " . count($articles));
 
-        return [];
+        return $articles;
     }
 }

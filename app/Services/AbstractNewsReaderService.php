@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\NewsSource;
+use App\Models\NewsReaderSource;
 use App\Services\Interfaces\INewsReaderService;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
@@ -15,7 +15,7 @@ abstract class AbstractNewsReaderService implements INewsReaderService
 
     protected string $apiKeyQueryName = "apiKey";
 
-    public function __construct(NewsSource $source)
+    public function __construct(NewsReaderSource $source)
     {
         $this->apiUrl = $source->api_url;
         $this->apiKey = $source->api_key;
