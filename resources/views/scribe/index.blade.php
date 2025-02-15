@@ -187,9 +187,9 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"q\": \"possimus\",
-    \"per_page\": 13,
-    \"page\": 13
+    \"q\": \"odit\",
+    \"per_page\": 10,
+    \"page\": 10
 }"
 </code></pre></div>
 
@@ -205,9 +205,9 @@ const headers = {
 };
 
 let body = {
-    "q": "possimus",
-    "per_page": 13,
-    "page": 13
+    "q": "odit",
+    "per_page": 10,
+    "page": 10
 };
 
 fetch(url, {
@@ -353,10 +353,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="q"                data-endpoint="POSTapi-user-articles-feed"
-               value="possimus"
+               value="odit"
                data-component="body">
     <br>
-<p>Example: <code>possimus</code></p>
+<p>Example: <code>odit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -364,10 +364,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="POSTapi-user-articles-feed"
-               value="13"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>13</code></p>
+<p>Example: <code>10</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -375,10 +375,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="POSTapi-user-articles-feed"
-               value="13"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>13</code></p>
+<p>Example: <code>10</code></p>
         </div>
         </form>
 
@@ -400,17 +400,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"q\": \"dignissimos\",
-    \"per_page\": 19,
-    \"page\": 7,
+    \"q\": \"in\",
+    \"per_page\": 1,
+    \"page\": 19,
     \"sources\": [
-        \"repellendus\"
+        \"saepe\"
     ],
     \"categories\": [
-        \"repudiandae\"
+        \"rem\"
     ],
     \"authors\": [
-        \"laborum\"
+        \"quia\"
     ]
 }"
 </code></pre></div>
@@ -427,17 +427,17 @@ const headers = {
 };
 
 let body = {
-    "q": "dignissimos",
-    "per_page": 19,
-    "page": 7,
+    "q": "in",
+    "per_page": 1,
+    "page": 19,
     "sources": [
-        "repellendus"
+        "saepe"
     ],
     "categories": [
-        "repudiandae"
+        "rem"
     ],
     "authors": [
-        "laborum"
+        "quia"
     ]
 };
 
@@ -584,10 +584,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="q"                data-endpoint="POSTapi-user-articles"
-               value="dignissimos"
+               value="in"
                data-component="body">
     <br>
-<p>Example: <code>dignissimos</code></p>
+<p>Example: <code>in</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -595,10 +595,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="POSTapi-user-articles"
-               value="19"
+               value="1"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -606,10 +606,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="POSTapi-user-articles"
-               value="7"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>sources</code></b>&nbsp;&nbsp;
@@ -673,8 +673,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"jesus05@example.org\",
-    \"password\": \"Y^_4ux\'1oU\"
+    \"email\": \"akozey@example.net\",
+    \"password\": \";\\\"$h2X\"
 }"
 </code></pre></div>
 
@@ -690,8 +690,8 @@ const headers = {
 };
 
 let body = {
-    "email": "jesus05@example.org",
-    "password": "Y^_4ux'1oU"
+    "email": "akozey@example.net",
+    "password": ";\"$h2X"
 };
 
 fetch(url, {
@@ -794,10 +794,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-login"
-               value="jesus05@example.org"
+               value="akozey@example.net"
                data-component="body">
     <br>
-<p>Example: <code>jesus05@example.org</code></p>
+<p>Example: <code>akozey@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -805,10 +805,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-login"
-               value="Y^_4ux'1oU"
+               value=";"$h2X"
                data-component="body">
     <br>
-<p>minimum character length is 6 Example: <code>Y^_4ux'1oU</code></p>
+<p>minimum character length is 6 Example: <code>;"$h2X</code></p>
         </div>
         </form>
 
@@ -829,10 +829,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"autem\",
-    \"email\": \"ladarius.miller@example.org\",
-    \"password\": \"#XDsCK)&amp;,PJ|,S\",
-    \"password_confirmation\": \"voluptatem\"
+    \"name\": \"numquam\",
+    \"email\": \"koelpin.teresa@example.net\",
+    \"password\": \"NVb;*4aX$k*$\",
+    \"password_confirmation\": \"omnis\"
 }"
 </code></pre></div>
 
@@ -848,10 +848,10 @@ const headers = {
 };
 
 let body = {
-    "name": "autem",
-    "email": "ladarius.miller@example.org",
-    "password": "#XDsCK)&amp;,PJ|,S",
-    "password_confirmation": "voluptatem"
+    "name": "numquam",
+    "email": "koelpin.teresa@example.net",
+    "password": "NVb;*4aX$k*$",
+    "password_confirmation": "omnis"
 };
 
 fetch(url, {
@@ -954,10 +954,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-auth-register"
-               value="autem"
+               value="numquam"
                data-component="body">
     <br>
-<p>Example: <code>autem</code></p>
+<p>Example: <code>numquam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -965,10 +965,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-register"
-               value="ladarius.miller@example.org"
+               value="koelpin.teresa@example.net"
                data-component="body">
     <br>
-<p>Example: <code>ladarius.miller@example.org</code></p>
+<p>Example: <code>koelpin.teresa@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -976,10 +976,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-register"
-               value="#XDsCK)&,PJ|,S"
+               value="NVb;*4aX$k*$"
                data-component="body">
     <br>
-<p>Example: <code>#XDsCK)&amp;,PJ|,S</code></p>
+<p>Example: <code>NVb;*4aX$k*$</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -987,10 +987,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password_confirmation"                data-endpoint="POSTapi-auth-register"
-               value="voluptatem"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
         </form>
 
@@ -1503,13 +1503,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"sources\": [
-        \"maiores\"
+        \"quae\"
     ],
     \"categories\": [
-        \"iusto\"
+        \"velit\"
     ],
     \"authors\": [
-        \"ex\"
+        \"earum\"
     ]
 }"
 </code></pre></div>
@@ -1527,13 +1527,13 @@ const headers = {
 
 let body = {
     "sources": [
-        "maiores"
+        "quae"
     ],
     "categories": [
-        "iusto"
+        "velit"
     ],
     "authors": [
-        "ex"
+        "earum"
     ]
 };
 

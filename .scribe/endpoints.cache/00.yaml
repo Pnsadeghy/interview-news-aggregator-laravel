@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: jesus05@example.org
+        example: akozey@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'minimum character length is 6'
         required: true
-        example: "Y^_4ux'1oU"
+        example: ';"$h2X'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: jesus05@example.org
-      password: "Y^_4ux'1oU"
+      email: akozey@example.net
+      password: ';"$h2X'
     fileParameters: []
     responses:
       -
@@ -100,7 +100,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: autem
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: ladarius.miller@example.org
+        example: koelpin.teresa@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '#XDsCK)&,PJ|,S'
+        example: 'NVb;*4aX$k*$'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,17 +130,17 @@ endpoints:
         name: password_confirmation
         description: ''
         required: true
-        example: voluptatem
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: autem
-      email: ladarius.miller@example.org
-      password: '#XDsCK)&,PJ|,S'
-      password_confirmation: voluptatem
+      name: numquam
+      email: koelpin.teresa@example.net
+      password: 'NVb;*4aX$k*$'
+      password_confirmation: omnis
     fileParameters: []
     responses:
       -
