@@ -56,7 +56,7 @@ class FetchNewsFromSourceJob
             return null;
         }
 
-        cache()->forever(self::INDEX_CACHE_KEY, $currentIndex + 1);
+        Cache::forever(self::INDEX_CACHE_KEY, $currentIndex + 1);
 
         return new $readerClass($source);
     }
