@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\NewsReaderSource>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Author>
  */
-class NewsReaderSourceFactory extends Factory
+class AuthorFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,11 +18,8 @@ class NewsReaderSourceFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'is_enabled' => true,
-            'api_url' => '',
-            'api_key' => '',
-            'reader_class' => '',
-            'request_data' => []
+            'url' => $this->faker->url(),
+            'is_enabled' => true
         ];
     }
 

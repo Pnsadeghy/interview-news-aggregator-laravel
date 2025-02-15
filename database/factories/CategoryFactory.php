@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\NewsReaderSource>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
  */
-class NewsReaderSourceFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,12 +17,8 @@ class NewsReaderSourceFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name(),
-            'is_enabled' => true,
-            'api_url' => '',
-            'api_key' => '',
-            'reader_class' => '',
-            'request_data' => []
+            'title' => $this->faker->unique()->word(),
+            'is_enabled' => true
         ];
     }
 

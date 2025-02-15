@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news_reader_sources', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
-            $table->string('name');
-            $table->string('api_url');
-            $table->string('api_key');
-            $table->json('request_data');
-            $table->string('reader_class');
+            $table->string('title')->unique();
             $table->boolean('is_enabled');
 
             $table->timestamps();
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('news_reader_sources');
+        Schema::dropIfExists('categories');
     }
 };

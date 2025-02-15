@@ -15,7 +15,7 @@ class NewsReaderSourceRepository extends ResourceRepository implements INewsRead
     public function getListFromCache(): Collection
     {
         return cache()->rememberForever(self::CACHE_KEY, function () {
-            return $this->model->active()->get();
+            return $this->model->enabled()->get();
         });
     }
 }
