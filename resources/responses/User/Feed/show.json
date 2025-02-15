@@ -1,0 +1,10 @@
+{
+    "data": {
+        "id": "Feed uuid",
+        "title": "Feed title",
+        "default": true
+    },
+    "sources": ["source uuid"],
+    "categories": ["category uuid"],
+    "authors": ["author uuid"]
+}

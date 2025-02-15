@@ -26,6 +26,16 @@ services:
     networks:
       - app_network
 
+  mysql_test:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: ${DB_TEST_DATABASE}
+      MYSQL_USER: ${DB_TEST_USERNAME}
+      MYSQL_PASSWORD: ${DB_TEST_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_TEST_PASSWORD}
+    networks:
+      - app_network
+
   redis:
     image: redis:latest
     environment:

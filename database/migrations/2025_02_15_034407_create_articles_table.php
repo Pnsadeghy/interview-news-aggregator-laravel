@@ -26,6 +26,8 @@ return new class extends Migration
             $table->text('body')->nullable();
             $table->timestamp('published_at')->nullable();
 
+            $table->fullText(['title', 'description', 'body']);
+
             $table->timestamps();
         });
     }
