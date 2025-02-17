@@ -21,7 +21,7 @@ class NewsReaderSourceSeeder extends Seeder
         NewsReaderSource::factory()->create([
             'name' => 'NewsApi.org',
             'api_url' => 'https://newsapi.org/v2/top-headlines',
-            'api_key' => '545cf89103b3440990a20881bf5d743a',
+            'api_key' => env('NEWS_API_ORG_API_KEY'),
             'reader_class' => 'NewsApiOrgReader',
             'request_data' => [
                 'country' => 'us'
@@ -31,7 +31,7 @@ class NewsReaderSourceSeeder extends Seeder
         NewsReaderSource::factory()->create([
             'name' => 'TheGuardian.com',
             'api_url' => 'https://content.guardianapis.com/search',
-            'api_key' => '42f3d8bb-a913-483d-8cb6-5bb4d6d06053',
+            'api_key' => env('THE_GUARDIAN_API_KEY'),
             'reader_class' => 'TheGuardianReader',
             'request_data' => []
         ]);
@@ -39,7 +39,7 @@ class NewsReaderSourceSeeder extends Seeder
         NewsReaderSource::factory()->create([
             'name' => 'NewsApi.ai',
             'api_url' => 'https://eventregistry.org/api/v1/article/getArticles',
-            'api_key' => '98397896-22bd-4e67-b8e0-0f6226681c47',
+            'api_key' => env('NEWS_API_AI_API_KEY'),
             'reader_class' => 'NewsApiAiReader',
             'request_data' => [
                 'lang' => 'eng'
