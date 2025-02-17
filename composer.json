@@ -56,6 +56,11 @@
         "test": [
             "@php artisan migrate --database=mysql_test",
             "@php vendor/bin/phpunit"
+        ],
+        "setup": [
+            "php artisan key:generate",
+            "php artisan config:cache",
+            "php artisan migrate --seed"
         ]
     },
     "extra": {

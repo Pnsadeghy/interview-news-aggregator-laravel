@@ -16,8 +16,7 @@ This application is built with Laravel 11 and designed to provide users with a p
 3. Run docker compose command
    1. Deploy: `docker compose up --build -d`
    2. Local: `docker compose -f docker-compose.local.yml up --build -d`
-4. Run `docker-compose exec app php key:generate`
-5. Run `docker-compose exec app php artisan migrate --seed`
+4. Run `docker-compose exec app php setup`
 
 ## Url
 - Deploy: http://localhost:80
