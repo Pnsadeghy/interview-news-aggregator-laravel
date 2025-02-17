@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: akozey@example.net
+        example: breitenberg.ruby@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'minimum character length is 6'
         required: true
-        example: ';"$h2X'
+        example: "?qc?R7;BoK'"
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: akozey@example.net
-      password: ';"$h2X'
+      email: breitenberg.ruby@example.org
+      password: "?qc?R7;BoK'"
     fileParameters: []
     responses:
       -
@@ -100,7 +100,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: numquam
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: koelpin.teresa@example.net
+        example: verdie.zboncak@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'NVb;*4aX$k*$'
+        example: ":vwH8{K]M3*;'ac.|Ds"
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,17 +130,17 @@ endpoints:
         name: password_confirmation
         description: ''
         required: true
-        example: omnis
+        example: enim
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: numquam
-      email: koelpin.teresa@example.net
-      password: 'NVb;*4aX$k*$'
-      password_confirmation: omnis
+      name: dolorem
+      email: verdie.zboncak@example.net
+      password: ":vwH8{K]M3*;'ac.|Ds"
+      password_confirmation: enim
     fileParameters: []
     responses:
       -

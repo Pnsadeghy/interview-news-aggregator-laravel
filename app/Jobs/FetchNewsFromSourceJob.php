@@ -108,22 +108,30 @@ class FetchNewsFromSourceJob
             ]);
         })->toArray();
 
-        ArticleCategory::query()->insert($articleCategories);
-        ArticleAuthor::query()->insert($articleAuthors);
+        ArticleCategory::query()->upsert($articleCategories, ['article_id', 'category_id']);
+        ArticleAuthor::query()->upsert($articleAuthors, ['article_id', 'author_id']);
     }
 
     private function generateNewsSources(Collection $articles): void
     {
         $newsSources = collect($articles)
-            ->map(fn($article) => [
-                'title' => $article->sourceTitle,
-                'url' => $article->sourceUrl ?? null,
-                'is_enabled' => true,
-            ])
+            ->map(function($article) {
+                $url = $article->sourceUrl ?? null;
+
+                if ($url && !str_starts_with($url, 'http')) {
+                    $url = 'https://' . $url;
+                }
+
+                return [
+                    'title' => $article->sourceTitle,
+                    'url' => $url,
+                    'is_enabled' => true,
+                ];
+            })
             ->unique('title')
             ->toArray();
 
-        NewsSource::query()->upsert($newsSources, ['title']);
+        NewsSource::query()->upsert($newsSources, ['title', 'url']);
     }
 
     private function generateCategories(Collection $articles): void
@@ -160,7 +168,7 @@ class FetchNewsFromSourceJob
             })
             ->toArray();
 
-        Author::query()->upsert($authors, ['news_source_id', 'name']);
+        Author::query()->upsert($authors, ['news_source_id', 'name', 'url']);
     }
 
     public function generateArticles(Collection $articles, array $newsSourceMap): void

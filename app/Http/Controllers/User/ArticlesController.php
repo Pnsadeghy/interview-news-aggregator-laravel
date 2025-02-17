@@ -10,6 +10,7 @@ use App\Repositories\Interfaces\IArticleRepository;
 use App\Repositories\Interfaces\IUserFeedRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @group Articles
@@ -85,7 +86,7 @@ class ArticlesController extends Controller
                 ->includesCategories()
                 ->includesAuthors()
                 ->paginate($per_page, "published_at", true, [
-                    "id", "title", "image_url", "slug", "url", "description", "body", "published_at"
+                    "id", "news_source_id", "title", "image_url", "slug", "url", "description", "body", "published_at"
                 ])
         );
     }

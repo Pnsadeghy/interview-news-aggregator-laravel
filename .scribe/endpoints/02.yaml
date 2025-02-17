@@ -31,7 +31,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - quae
+          - hic
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -42,7 +42,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - velit
+          - dolore
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -53,7 +53,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - earum
+          - reprehenderit
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -61,11 +61,11 @@ endpoints:
         custom: []
     cleanBodyParameters:
       sources:
-        - quae
+        - hic
       categories:
-        - velit
+        - dolore
       authors:
-        - earum
+        - reprehenderit
     fileParameters: []
     responses:
       -

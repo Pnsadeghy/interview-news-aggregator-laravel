@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->boolean('is_enabled');
 
-            $table->unique(['news_source_id', 'name']);
+            $table->unique(['news_source_id', 'name', 'url']);
 
             $table->timestamps();
         });

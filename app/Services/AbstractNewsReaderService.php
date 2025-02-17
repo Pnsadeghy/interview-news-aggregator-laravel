@@ -84,7 +84,7 @@ abstract class AbstractNewsReaderService implements INewsReaderService
         if ($this->fromDateQueryName != "") {
             $cachedDate = Cache::get($this->dateCacheKey);
             if ($cachedDate) {
-                $data[$this->dateCacheKey] = $cachedDate;
+                $data[$this->fromDateQueryName] = $cachedDate;
             }
         }
         return $data;

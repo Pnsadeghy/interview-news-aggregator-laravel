@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('news_sources', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
-            $table->string('title')->unique();
+            $table->string('title');
             $table->string('url')->nullable();
             $table->boolean('is_enabled');
+
+            $table->unique(['title', 'url']);
 
             $table->timestamps();
         });

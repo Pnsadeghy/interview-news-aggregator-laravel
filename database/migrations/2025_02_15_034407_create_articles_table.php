@@ -17,10 +17,10 @@ return new class extends Migration
             $table->foreignUuid('news_reader_source_id')->nullable()->constrained();
             $table->foreignUuid('news_source_id')->nullable()->constrained();
 
-            $table->string('title');
+            $table->string('title', 512);
             $table->string('slug')->unique();
             $table->boolean('is_published');
-            $table->string('url')->unique()->nullable();
+            $table->string('url', 512)->unique()->nullable();
             $table->string('image_url')->nullable();
             $table->text('description')->nullable();
             $table->text('body')->nullable();
