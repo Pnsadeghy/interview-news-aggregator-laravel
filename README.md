@@ -13,10 +13,11 @@ This application is built with Laravel 11 and designed to provide users with a p
 
 1. Clone this repository
 2. Navigate to the project directory
-3. Run docker compose command
+3. Create .env file from .env.example
+4. Run docker compose command
    1. Deploy: `docker compose up --build -d`
    2. Local: `docker compose -f docker-compose.local.yml up --build -d`
-4. Run `docker-compose exec app php setup`
+5. Run `docker-compose exec app php setup`
 
 ## Url
 - Deploy: http://localhost:80
@@ -24,7 +25,7 @@ This application is built with Laravel 11 and designed to provide users with a p
 - Phpmyadmin: http://localhost:8080
 - Api Documentation: http://localhost:8000/docs
 
-### Laravel
+### Framework Documentation
 - [Laravel 11](https://laravel.com/docs/11.x)
 
 ### Application useful commands
